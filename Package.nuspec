@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Cake.ArgumentHelpers</id>
+    <version>0.0.3</version>
+    <authors>Adam Patridge</authors>
+    <owners>Adam Patridge</owners>
+    <licenseUrl>https://github.com/patridge/Cake.ArgumentHelpers/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/patridge/Cake.ArgumentHelpers</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cake add-on trying to make it easier to handle various inputs from arguments and environment variable.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright (c) Adam Patridge 2017</copyright>
+    <tags>Cake Script Build</tags>
+
+    <dependencies>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="./Cake.ArgumentHelpers/bin/Release/Cake.ArgumentHelpers.dll" target="lib\net45" />
+    <file src="./Cake.ArgumentHelpers/bin/Release/Cake.ArgumentHelpers.xml" target="lib\net45" />
+  </files>
+</package>
