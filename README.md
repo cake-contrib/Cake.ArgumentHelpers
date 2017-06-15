@@ -12,7 +12,9 @@ Just reference the Cake.ArgumentHelpers NuGet package directly in your build scr
 
 Yep, just one so far...
 
-### `bool ArgumentOrEnvironmentVariable(..., string name, string environmentNamePrefix, bool defaultValue)`
+### ArgumentOrEnvironmentVariable
+
+`bool ArgumentOrEnvironmentVariable(..., string name, string environmentNamePrefix, bool defaultValue)`
 
 Since `EnvironmentVariable` always returns a string, it is more complex to involve it in an `Argument` call with a fallback. This alias makes it a single call, hiding away the string comparison done to massage the result to a `bool` value.
 
