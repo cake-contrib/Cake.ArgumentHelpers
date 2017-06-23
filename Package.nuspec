@@ -5,6 +5,7 @@
     <version>0.0.3</version>
     <authors>Adam Patridge</authors>
     <owners>Adam Patridge</owners>
+    <iconUrl>https://rawgithub.com/cake-contrib/graphics/master/svg/cake-contrib.svg</iconUrl>
     <licenseUrl>https://github.com/patridge/Cake.ArgumentHelpers/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/patridge/Cake.ArgumentHelpers</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
