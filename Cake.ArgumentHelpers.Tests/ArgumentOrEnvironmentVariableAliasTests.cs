@@ -107,6 +107,21 @@ namespace Cake.ArgumentHelpers.Tests
 
 			Assert.AreEqual(expected, actual, "Didn't find Environment variable without prefix.");
 		}
+        [Test]
+        public void NullArgumentAndTrueEnvironmentNoPrefixOverload_ReturnsTrue()
+		{
+			var testKey = "someVariable";
+			var testKeyEnvironmentPrefix = (string)null;
+			bool? testArgumentValue = null;
+			bool? testEnvironmentValue = true;
+
+			SetupVariables(testKey, testKeyEnvironmentPrefix, testArgumentValue, testEnvironmentValue);
+
+			var expected = true;
+			var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, true);
+
+			Assert.AreEqual(expected, actual, "Didn't find Environment variable without prefix.");
+		}
 		[Test]
 		public void TrueArgumentAndTrueEnvironment_ReturnsTrue()
 		{

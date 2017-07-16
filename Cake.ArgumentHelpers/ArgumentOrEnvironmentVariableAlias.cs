@@ -17,5 +17,15 @@ namespace Cake.ArgumentHelpers
         {
             return ArgumentAliases.Argument(context, name, EnvironmentAliases.EnvironmentVariable(context, (environmentNamePrefix ?? "") + name) ?? defaultValue.ToString()).Equals("true", StringComparison.OrdinalIgnoreCase);
         }
+
+		/// <summary>
+		/// Get a bool variable from various script inputs: first via Argument, then falling back on EnvironmentVariable, finally falling back on a default.
+		/// </summary>
+		/// <returns>Value found or default, first checked in command-line argument, then environment variable.</returns>
+		[CakeMethodAlias]
+		public static bool ArgumentOrEnvironmentVariable(this ICakeContext context, string name, bool defaultValue)
+		{
+            return context.ArgumentOrEnvironmentVariable(name, null, defaultValue);
+		}
     }
 }
