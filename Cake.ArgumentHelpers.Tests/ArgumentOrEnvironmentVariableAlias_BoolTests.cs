@@ -4,7 +4,7 @@ using Moq;
 
 namespace Cake.ArgumentHelpers.Tests {
     [TestFixture()]
-    public class ArgumentOrEnvironmentVariableAliasTests {
+    public class ArgumentOrEnvironmentVariableAlias_BoolTests {
         Mock<ICakeContext> cakeContextMock;
         Mock<ICakeArguments> cakeArgumentsMock;
         Mock<ICakeEnvironment> cakeEnvironmentMock;

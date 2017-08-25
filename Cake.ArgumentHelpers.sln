@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.ArgumentHelpers", "Cake.ArgumentHelpers\Cake.ArgumentHelpers.csproj", "{9C50A7C4-E00D-4851-8311-81135D062C77}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EA17B50A-988B-47C1-9840-DC7347D88259}"
 	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
 		Package.nuspec = Package.nuspec
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.ArgumentHelpers.Tests", "Cake.ArgumentHelpers.Tests\Cake.ArgumentHelpers.Tests.csproj", "{1297E243-9A95-45A5-A5C6-AAAC94ECEE22}"
@@ -30,42 +32,45 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-    GlobalSection(MonoDevelopProperties) = preSolution
-        Policies = $0
-        $0.TextStylePolicy = $1
-        $1.NoTabsAfterNonTabs = True
-        $1.inheritsSet = VisualStudio
-        $1.inheritsScope = text/plain
-        $1.scope = text/x-csharp
-        $0.CSharpFormattingPolicy = $2
-        $2.NamespaceBraceStyle = EndOfLine
-        $2.ClassBraceStyle = EndOfLine
-        $2.InterfaceBraceStyle = EndOfLine
-        $2.StructBraceStyle = EndOfLine
-        $2.EnumBraceStyle = EndOfLine
-        $2.MethodBraceStyle = EndOfLine
-        $2.ConstructorBraceStyle = EndOfLine
-        $2.DestructorBraceStyle = EndOfLine
-        $2.ElseNewLinePlacement = NewLine
-        $2.BeforeMethodDeclarationParentheses = False
-        $2.BeforeMethodCallParentheses = False
-        $2.BeforeConstructorDeclarationParentheses = False
-        $2.BeforeIndexerDeclarationBracket = False
-        $2.BeforeDelegateDeclarationParentheses = False
-        $2.AfterDelegateDeclarationParameterComma = True
-        $2.NewParentheses = False
-        $2.SpacesBeforeBrackets = False
-        $2.inheritsSet = Mono
-        $2.inheritsScope = text/x-csharp
-        $2.scope = text/x-csharp
-        $2.NewLinesForBracesInTypes = False
-        $2.NewLinesForBracesInMethods = False
-        $2.SpacingAfterMethodDeclarationName = False
-        $2.SpaceAfterMethodCallName = False
-        $2.SpaceBeforeOpenSquareBracket = False
-        $0.DotNetNamingPolicy = $3
-        $3.DirectoryNamespaceAssociation = None
-        $3.ResourceNamePolicy = FileFormatDefault
-        StartupItem = Smudges.iOS\Smudges.iOS.csproj
-    EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1B5DAA9-DAD7-4FEA-8B04-2E4A112C196F}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		        Policies = $0
+		        $0.TextStylePolicy = $1
+		        $1.NoTabsAfterNonTabs = True
+		        $1.inheritsSet = VisualStudio
+		        $1.inheritsScope = text/plain
+		        $1.scope = text/x-csharp
+		        $0.CSharpFormattingPolicy = $2
+		        $2.NamespaceBraceStyle = EndOfLine
+		        $2.ClassBraceStyle = EndOfLine
+		        $2.InterfaceBraceStyle = EndOfLine
+		        $2.StructBraceStyle = EndOfLine
+		        $2.EnumBraceStyle = EndOfLine
+		        $2.MethodBraceStyle = EndOfLine
+		        $2.ConstructorBraceStyle = EndOfLine
+		        $2.DestructorBraceStyle = EndOfLine
+		        $2.ElseNewLinePlacement = NewLine
+		        $2.BeforeMethodDeclarationParentheses = False
+		        $2.BeforeMethodCallParentheses = False
+		        $2.BeforeConstructorDeclarationParentheses = False
+		        $2.BeforeIndexerDeclarationBracket = False
+		        $2.BeforeDelegateDeclarationParentheses = False
+		        $2.AfterDelegateDeclarationParameterComma = True
+		        $2.NewParentheses = False
+		        $2.SpacesBeforeBrackets = False
+		        $2.inheritsSet = Mono
+		        $2.inheritsScope = text/x-csharp
+		        $2.scope = text/x-csharp
+		        $2.NewLinesForBracesInTypes = False
+		        $2.NewLinesForBracesInMethods = False
+		        $2.SpacingAfterMethodDeclarationName = False
+		        $2.SpaceAfterMethodCallName = False
+		        $2.SpaceBeforeOpenSquareBracket = False
+		        $0.DotNetNamingPolicy = $3
+		        $3.DirectoryNamespaceAssociation = None
+		        $3.ResourceNamePolicy = FileFormatDefault
+		        StartupItem = Smudges.iOS\Smudges.iOS.csproj
+	EndGlobalSection
 EndGlobal

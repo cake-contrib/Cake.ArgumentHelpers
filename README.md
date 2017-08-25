@@ -10,9 +10,9 @@ Just reference the Cake.ArgumentHelpers NuGet package directly in your build scr
 
 ## Available Aliases
 
-Yep, just one so far...
+Yep, just two so far...
 
-### ArgumentOrEnvironmentVariable
+### ArgumentOrEnvironmentVariable (for boolean values)
 
 `bool ArgumentOrEnvironmentVariable(..., string name, string environmentNamePrefix, bool defaultValue)`
 
@@ -32,4 +32,22 @@ Given a potential command line argument of `SomeSetting` that could also be set 
 var isSomethingTrue = ArgumentOrEnvironmentVariable("SomeSetting", "SomeProject_", false);
 ```
 
-## 
+### ArgumentOrEnvironmentVariable (for string values)
+
+`string ArgumentOrEnvironmentVariable(..., string name, string environmentNamePrefix[, string defaultValue])`
+
+This is a helper method that simply wraps around nested calls to Arugment and EnvironmentVariable (and offering a fallback default).
+
+It works by getting a string value with multiple fallbacks:
+
+1. Try to get it from `Argument` (e.g., command line: `-SomeSetting="SomeValue"`)
+2. Try to get it from `EnvironmentVariable` (e.g., `$env:SomeProject_SomeSetting = "SomeOtherValue";`)
+3. Use a `defaultValue` if we don't find it elsewhere
+
+#### Example
+
+Given a potential command line argument of `SomeSetting` that could also be set via an environment variable prefixed with a project name, get the boolean value or `false` if it isn't found:
+
+```csharp
+var someVariableValue = ArgumentOrEnvironmentVariable("SomeSetting", "SomeProject_", "SomeFallbackValue");
+```
