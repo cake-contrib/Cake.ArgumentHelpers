@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Cake.ArgumentHelpers</id>
-    <version>0.0.3</version>
+    <version>0.1.0</version>
     <authors>Adam Patridge</authors>
     <owners>Adam Patridge</owners>
     <iconUrl>https://rawgithub.com/cake-contrib/graphics/master/svg/cake-contrib.svg</iconUrl>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/patridge/Cake.ArgumentHelpers</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Cake add-on trying to make it easier to handle various inputs from arguments and environment variable.</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Added string helper. Unit tests are also available/passing.</releaseNotes>
     <copyright>Copyright (c) Adam Patridge 2017</copyright>
     <tags>Cake Script Build</tags>
 
