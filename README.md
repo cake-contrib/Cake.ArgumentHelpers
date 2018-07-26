@@ -36,7 +36,7 @@ var isSomethingTrue = ArgumentOrEnvironmentVariable("SomeSetting", "SomeProject_
 
 `string ArgumentOrEnvironmentVariable(..., string name, string environmentNamePrefix[, string defaultValue])`
 
-This is a helper method that simply wraps around nested calls to Arugment and EnvironmentVariable (and offering a fallback default).
+This is a helper method that simply wraps around nested calls to Argument and EnvironmentVariable (and offering a fallback default).
 
 It works by getting a string value with multiple fallbacks:
 
@@ -46,7 +46,7 @@ It works by getting a string value with multiple fallbacks:
 
 #### Example
 
-Given a potential command line argument of `SomeSetting` that could also be set via an environment variable prefixed with a project name, get the boolean value or `false` if it isn't found:
+Given a potential command line argument of `SomeSetting` that could also be set via an environment variable (optionally prefixed with a project name), get the value from the command line first, falling back to the environment variable next before using the default fallback value if none of those are found:
 
 ```csharp
 var someVariableValue = ArgumentOrEnvironmentVariable("SomeSetting", "SomeProject_", "SomeFallbackValue");
