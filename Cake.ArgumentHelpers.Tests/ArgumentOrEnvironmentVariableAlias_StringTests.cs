@@ -1,16 +1,18 @@
-﻿using NUnit.Framework;
+﻿using System;
 using Cake.Core;
 using Moq;
+using Xunit;
 
-namespace Cake.ArgumentHelpers.Tests {
-    [TestFixture()]
-    public class ArgumentOrEnvironmentVariableAlias_StringTests {
-        Mock<ICakeContext> cakeContextMock;
-        Mock<ICakeArguments> cakeArgumentsMock;
-        Mock<ICakeEnvironment> cakeEnvironmentMock;
+namespace Cake.ArgumentHelpers.Tests
+{
+    public class ArgumentOrEnvironmentVariableAlias_StringTests : IDisposable
+    {
+        private Mock<ICakeContext> cakeContextMock;
+        private Mock<ICakeArguments> cakeArgumentsMock;
+        private Mock<ICakeEnvironment> cakeEnvironmentMock;
 
-        [SetUp]
-        public void Setup() {
+        public ArgumentOrEnvironmentVariableAlias_StringTests()
+        {
             cakeContextMock = new Mock<ICakeContext>();
             cakeArgumentsMock = new Mock<ICakeArguments>();
             cakeEnvironmentMock = new Mock<ICakeEnvironment>();
@@ -18,10 +20,12 @@ namespace Cake.ArgumentHelpers.Tests {
             cakeContextMock.Setup(cakeContext => cakeContext.Environment).Returns(cakeEnvironmentMock.Object);
         }
 
-        void SetupVariables(string key, string environmentPrefix, string argumentValue, string environmentValue) {
+        private void SetupVariables(string key, string environmentPrefix, string argumentValue, string environmentValue)
+        {
             bool hasArgument = argumentValue != null;
             cakeArgumentsMock.Setup(x => x.HasArgument(key)).Returns(hasArgument);
-            if (hasArgument) {
+            if (hasArgument)
+            {
                 cakeArgumentsMock.Setup(x => x.GetArgument(key)).Returns(argumentValue.ToString());
             }
             bool hasEnvironmentVariable = environmentValue != null;
@@ -31,8 +35,9 @@ namespace Cake.ArgumentHelpers.Tests {
             }
         }
 
-        [Test]
-        public void SomeArgumentAndNullEnvironment_ReturnsSome() {
+        [Fact]
+        public void SomeArgumentAndNullEnvironment_ReturnsSome()
+        {
             var testKey = "someVariable";
             var testKeyEnvironmentPrefix = "somePrefix_";
             string testArgumentValue = "Some";
@@ -43,10 +48,11 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = testArgumentValue;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix, (string)null);
 
-            Assert.AreEqual(expected, actual, "Didn't find Argument variable.");
+            Assert.Equal(expected, actual);
         }
-        [Test]
-        public void NullArgumentAndNullEnvironmentAndNullDefault_ReturnsNull() {
+        [Fact]
+        public void NullArgumentAndNullEnvironmentAndNullDefault_ReturnsNull()
+        {
             var testKey = "someVariable";
             var testKeyEnvironmentPrefix = "somePrefix_";
             string testArgumentValue = null;
@@ -57,10 +63,11 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = (string)null;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix, (string)null);
 
-            Assert.AreEqual(expected, actual, "Found unexpected variable value.");
+            Assert.Equal(expected, actual);
         }
-        [Test]
-        public void NullArgumentAndSomeEnvironment_ReturnsSome() {
+        [Fact]
+        public void NullArgumentAndSomeEnvironment_ReturnsSome()
+        {
             var testKey = "someVariable";
             var testKeyEnvironmentPrefix = "somePrefix_";
             string testArgumentValue = null;
@@ -71,10 +78,11 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = testEnvironmentValue;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix, (string)null);
 
-            Assert.AreEqual(expected, actual, "Didn't find Environment variable.");
+            Assert.Equal(expected, actual);
         }
-        [Test]
-        public void NullArgumentAndSomeEnvironmentWithoutPrefix_ReturnsSome() {
+        [Fact]
+        public void NullArgumentAndSomeEnvironmentWithoutPrefix_ReturnsSome()
+        {
             var testKey = "someVariable";
             var testKeyEnvironmentPrefix = (string)null;
             string testArgumentValue = null;
@@ -85,10 +93,11 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = testEnvironmentValue;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix, (string)null);
 
-            Assert.AreEqual(expected, actual, "Didn't find Environment variable without prefix.");
+            Assert.Equal(expected, actual);
         }
-        [Test]
-        public void SomeArgumentAndOtherEnvironment_ReturnsSome() {
+        [Fact]
+        public void SomeArgumentAndOtherEnvironment_ReturnsSome()
+        {
             var testKey = "someVariable";
             var testKeyEnvironmentPrefix = "somePrefix_";
             string testArgumentValue = "Some";
@@ -99,9 +108,9 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = testArgumentValue;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix, (string)null);
 
-            Assert.AreEqual(expected, actual, "Didn't find correct variable value from Argument source.");
+            Assert.Equal(expected, actual);
         }
-        [Test]
+        [Fact]
         public void NullArgumentAndNullEnvironment_ReturnsDefault()
         {
             var testKey = "someVariable";
@@ -115,9 +124,9 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = defaultValue;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix, defaultValue);
 
-            Assert.AreEqual(expected, actual, "Didn't fall back on default value.");
+            Assert.Equal(expected, actual);
         }
-        [Test]
+        [Fact]
         public void NullArgumentAndNullEnvironmentWithoutDefault_ReturnsNull()
         {
             var testKey = "someVariable";
@@ -130,7 +139,11 @@ namespace Cake.ArgumentHelpers.Tests {
             var expected = (string)null;
             var actual = cakeContextMock.Object.ArgumentOrEnvironmentVariable(testKey, testKeyEnvironmentPrefix);
 
-            Assert.AreEqual(expected, actual, "Didn't fail to a null value.");
+            Assert.Equal(expected, actual);
+        }
+
+        public void Dispose()
+        {
         }
     }
 }

@@ -7,8 +7,6 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Cake.ArgumentHelpers")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Cake.ArgumentHelpers")]
 [assembly: AssemblyCopyright("Copyright 2017 © Adam Patridge")]
 [assembly: AssemblyTrademark("")]
