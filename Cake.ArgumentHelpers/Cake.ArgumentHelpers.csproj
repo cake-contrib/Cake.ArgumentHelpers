@@ -13,8 +13,8 @@
     <!-- Import shared functionality -->
 	<Import Project="..\Shared.msbuild" />
 	<ItemGroup>
-		<PackageReference Include="Cake.Core" Version="0.27.1" />
-		<PackageReference Include="Cake.Common" Version="0.27.1" />
+    <PackageReference Include="Cake.Core" Version="0.28.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Common" Version="0.28.0" PrivateAssets="All" />
 	</ItemGroup>
     <!-- .NET Core packages -->
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">

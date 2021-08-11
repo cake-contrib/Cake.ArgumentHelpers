@@ -8,7 +8,7 @@ namespace Cake.ArgumentHelpers
     /// <summary>
     /// Contains Aliases for helping work with combinations of Argument and Environment variables.
     /// </summary>
-	[CakeAliasCategory("Arguments")]
+    [CakeAliasCategory("Arguments")]
     [CakeAliasCategory("Environment")]
     public static class ArgumentOrEnvironmentVariableAlias
     {
