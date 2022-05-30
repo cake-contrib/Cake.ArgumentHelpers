@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>Cake.ArgumentHelpers</AssemblyName>
-		<TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
 		<OutputType>Library</OutputType>
 		<PlatformTarget>AnyCpu</PlatformTarget>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -13,8 +13,8 @@
     <!-- Import shared functionality -->
 	<Import Project="..\Shared.msbuild" />
 	<ItemGroup>
-    <PackageReference Include="Cake.Core" Version="0.28.0" PrivateAssets="All" />
-    <PackageReference Include="Cake.Common" Version="0.28.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Core" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Common" Version="2.2.0" PrivateAssets="All" />
 	</ItemGroup>
     <!-- .NET Core packages -->
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
