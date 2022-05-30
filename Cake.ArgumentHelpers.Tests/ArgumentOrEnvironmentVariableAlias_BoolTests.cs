@@ -26,7 +26,7 @@ namespace Cake.ArgumentHelpers.Tests
             cakeArgumentsMock.Setup(x => x.HasArgument(key)).Returns(hasArgument);
             if (hasArgument)
             {
-                cakeArgumentsMock.Setup(x => x.GetArgument(key)).Returns(argumentValue.ToString());
+                cakeArgumentsMock.Setup(x => x.GetArguments(key)).Returns(new[] { argumentValue.ToString() });
             }
             cakeEnvironmentMock.Setup(x => x.GetEnvironmentVariable(environmentPrefix + key)).Returns(environmentValue != null ? environmentValue.Value.ToString() : null);
         }
