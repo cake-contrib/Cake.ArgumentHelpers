@@ -16,6 +16,10 @@
     <PackageReference Include="Cake.Core" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Cake.Common" Version="2.2.0" PrivateAssets="All" />
 	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\cake-contrib-medium.png" Pack="true" PackagePath="" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
     <!-- .NET Core packages -->
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
 	</ItemGroup>
