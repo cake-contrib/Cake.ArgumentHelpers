@@ -15,9 +15,8 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
-  <!-- Define .NET Core constants -->
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <DefineConstants>$(DefineConstants);NETCORE</DefineConstants>
+  <!-- Portable debug info -->
+  <PropertyGroup>
     <DebugType>portable</DebugType>
   </PropertyGroup>
   <!-- Attribute generation -->
