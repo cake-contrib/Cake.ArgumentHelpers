@@ -7,6 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>images\icon.png</PackageIcon>
     <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/addin/cake-contrib-addin-medium.png</PackageIconUrl>
     <Description>Cake aliases (methods) to help with consuming arguments and environment variables.</Description>
@@ -19,6 +20,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\asset\cake-argumenthelpers-nuget.png" Pack="true" Visible="false" PackagePath="images\icon.png" />
-    <None Include="..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
