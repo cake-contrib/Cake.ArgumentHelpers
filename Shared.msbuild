@@ -6,7 +6,6 @@
     <Authors>Patrik Svensson, Mattias Karlsson, Gary Ewan Park, Alistair Chapman, Martin Björkström and contributors</Authors>
     <Company>Patrik Svensson, Mattias Karlsson, Gary Ewan Park, Alistair Chapman, Martin Björkström and contributors</Company>
     <PackageLicense>LICENSE</PackageLicense>
-    <PackageIcon>cake-contrib-medium.png</PackageIcon>
     <RepositoryUrl>https://github.com/cake-build/cake</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Cake;Script;Build</PackageTags>
