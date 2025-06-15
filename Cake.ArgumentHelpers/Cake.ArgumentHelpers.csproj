@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Cake.ArgumentHelpers</AssemblyName>
-    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <PlatformTarget>AnyCpu</PlatformTarget>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -16,8 +16,8 @@
     <!-- Import shared functionality -->
   <Import Project="..\Shared.msbuild" />
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="2.0.0" PrivateAssets="All" />
-    <PackageReference Include="Cake.Common" Version="2.0.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Core" Version="4.0.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Common" Version="4.0.0" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\asset\cake-argumenthelpers-nuget.png" Pack="true" Visible="false" PackagePath="images\icon.png" />
